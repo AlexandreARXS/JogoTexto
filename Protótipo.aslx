@@ -1,0 +1,38 @@
+<!--Saved by Quest 5.8.6836.13983-->
+<asl version="580">
+  <include ref="English.aslx" />
+  <include ref="Core.aslx" />
+  <game name="Protótipo">
+    <gameid>3cc95adb-652e-4fa7-8fab-df42901f1861</gameid>
+    <version>1.0</version>
+    <firstpublished>2019</firstpublished>
+  </game>
+  <object name="Abandoned book store">
+    <inherit name="editor_room" />
+    <isroom />
+    <scenery />
+    <look type="string"></look>
+    <dropdestination type="object">player</dropdestination>
+    <description>You are located in a old bookstore, you can see some of your squadmates around you, you take off your mask to take a better look around you, </description>
+    <object name="player">
+      <inherit name="editor_object" />
+      <inherit name="editor_player" />
+      <inherit name="namedmale" />
+      <isroom type="boolean">false</isroom>
+      <prefix>Charles</prefix>
+      <suffix>Ryan</suffix>
+      <usedefaultprefix type="boolean">false</usedefaultprefix>
+      <attr name="pov_alias">Charles Ryan</attr>
+    </object>
+    <object name="Book">
+      <inherit name="editor_object" />
+      <look>A red book, with black lettlers writting "Chronicles of the United War", the author name is blank.</look>
+      <take />
+      <takemsg>You put the book in your bag</takemsg>
+      <ontake type="script">
+        picture ("The_Red_Book_-_Liber_Novus.jpg")
+      </ontake>
+    </object>
+  </object>
+  <command name="Help" />
+</asl>
